@@ -1,0 +1,46 @@
+name: secure_chat_app
+description: Proof-of-concept secure chat app with camera-based key generation.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Camera capture (RAM only - never saved to disk)
+  camera: ^0.11.0+2
+
+  # SHA-3 hashing + PBKDF2 key derivation
+  hashlib: ^2.3.0
+
+  # Secure Enclave (iOS) / TEE (Android) key storage
+  flutter_secure_storage: ^9.2.2
+
+  # Permission handling for camera
+  permission_handler: ^11.3.1
+
+  # QR code display
+  qr_flutter: ^4.1.0
+
+  # QR code scanning
+  mobile_scanner: ^5.1.0
+
+  # AES-GCM encryption for chat
+  cryptography: ^2.7.0
+
+  # HTTP for message relay (web sync)
+  http: ^1.2.0
+
+  # Unique IDs for chats
+  uuid: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
