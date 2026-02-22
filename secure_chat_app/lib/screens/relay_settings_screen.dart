@@ -133,7 +133,7 @@ class _RelaySettingsScreenState extends State<RelaySettingsScreen> {
                       Text(
                         _currentUrl != null && _currentUrl!.isNotEmpty
                             ? 'Saved override: $_currentUrl'
-                            : 'Using default relay URL (edit lib/config/relay_config.dart for production).',
+                            : 'Using default from .env RELAY_URL (see .env.example). Empty if not set via run_with_env.sh or --dart-define.',
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
                               color: Colors.white54,
                             ),
